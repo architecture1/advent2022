@@ -46,4 +46,3 @@ def matchup(b, a):
 if __name__ == "__main__":
     data = open("Day 2/day2input.txt", "r").readlines()
     print(solve())
-    data.close()
