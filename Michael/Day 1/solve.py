@@ -21,4 +21,3 @@ def solve() -> int:
 if __name__ == "__main__":
     data = open('Day 1/day1input.txt', 'r').readlines()
     print(solve())
-    data.close()
