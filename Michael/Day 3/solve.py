@@ -28,3 +28,4 @@ def priority(a):
 if __name__ == "__main__":
     data = open("Day 3/day3input.txt", "r").readlines()
     print(solvept1(), solvept2())
+    data.close()
