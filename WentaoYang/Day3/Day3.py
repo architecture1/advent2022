@@ -9,10 +9,12 @@ with open("./Day3.txt", "r") as input_file:
         first_half, second_half = set(sack[:len(sack) // 2]), set(sack[len(sack)//2:])
         ele = list(first_half.intersection(second_half))[0]
 
-        if ele.isupper():
-            total += (ord(ele) - ord("A")) + 27
-        else:
-            total += (ord(ele) - ord("a")) + 1
+        # if ele.isupper():
+        #     total += (ord(ele) - ord("A")) + 27
+        # else:
+        #     total += (ord(ele) - ord("a")) + 1
+
+        total += (ord(ele.lower()) - ord("a")) + 1 + 26 * ele.isupper()
 
     total2 = 0
     for i in range(0, len(sacks), 3):
