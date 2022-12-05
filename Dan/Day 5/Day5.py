@@ -1,5 +1,6 @@
 import re
 FILE = 'input.txt'
+MOVE_COMMAND = 'move'
 
 
 class CrateStack:
@@ -54,7 +55,7 @@ def get_crate_list(input_list):
 def get_command_list(input_list):
     command_list = []
     for line in input_list:
-        if line != '' and line.lstrip()[0] == "m": # replace with regex
+        if line != '' and MOVE_COMMAND in line:
             command_list.append([int(s) for s in re.findall(r'\b\d+\b', line)])
     return command_list
 
