@@ -11,9 +11,9 @@ class CrateStack:
         self.stacks = self.stack_from_list(crate_list)
 
     def stack_from_list(self, crate_list):
-        crate_stack = [None] * self.num_stacks
+        crate_stack = []
         for crate_index in range(self.num_stacks):
-            crate_stack[crate_index] = []
+            crate_stack.append([])
 
         for row in reversed(crate_list):
             for i in range(self.num_stacks):
