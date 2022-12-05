@@ -19,6 +19,9 @@ if __name__ == "__main__":
     with open('input.txt') as f:
         input_list = f.read().splitlines()
 
+    with open('input.txt') as f:
+        input_list2 = f.readlines()
+
     calorie_list = get_total_calories(input_list)
 
     # Part 1
